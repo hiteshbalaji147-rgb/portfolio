@@ -1,8 +1,14 @@
 import React from "react";
 import { siteConfig } from "../config/site";
+import { smoothScrollTo } from "../utils/scroll";
 import { ArrowUpRight, MapPin, Play, ChevronDown, Plus } from "lucide-react";
 
 export function Hero({ onOpenReel }) {
+  const handleScrollClick = (e, targetId) => {
+    e.preventDefault();
+    smoothScrollTo(targetId);
+  };
+
   return (
     <section className="hero" id="home">
       {/* Top Metadata & Availability Bar */}
@@ -39,11 +45,19 @@ export function Hero({ onOpenReel }) {
         <p className="hero-description">{siteConfig.identity.intro}</p>
         
         <div className="hero-actions">
-          <a href="#work" className="primary-link">
+          <a
+            href="#work"
+            className="primary-link"
+            onClick={(e) => handleScrollClick(e, "work")}
+          >
             <span>Explore Work</span>
             <ArrowUpRight size={16} />
           </a>
-          <a href="#contact" className="secondary-link">
+          <a
+            href="#contact"
+            className="secondary-link"
+            onClick={(e) => handleScrollClick(e, "contact")}
+          >
             <span>Get In Touch</span>
           </a>
         </div>
@@ -87,7 +101,12 @@ export function Hero({ onOpenReel }) {
           <span>Watch Reel (0:45)</span>
         </button>
 
-        <a href="#work" className="hero-scroll" aria-label="Scroll down to projects">
+        <a
+          href="#work"
+          className="hero-scroll"
+          onClick={(e) => handleScrollClick(e, "work")}
+          aria-label="Scroll down to projects"
+        >
           <span>Scroll to explore</span>
           <ChevronDown size={14} />
         </a>

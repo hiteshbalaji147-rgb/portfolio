@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import Lenis from "lenis";
+import "lenis/dist/lenis.css";
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
 import { ProjectGrid } from "./components/ProjectGrid";
@@ -10,6 +12,7 @@ import { Footer } from "./components/Footer";
 import { ProjectDialog } from "./components/ProjectDialog";
 import { ReelModal } from "./components/ReelModal";
 import { toggleSwarm } from "./swarm/swarmEngine";
+import { smoothScrollTo } from "./utils/scroll";
 
 export function App() {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -18,10 +21,28 @@ export function App() {
   const [reelOpen, setReelOpen] = useState(false);
 
   useEffect(() => {
+    // Initialize Lenis smooth scroll engine
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      smoothWheel: true,
+      smoothTouch: false,
+    });
+
+    window.__lenis = lenis;
+
+    let rafId;
+    function raf(time) {
+      lenis.raf(time);
+      rafId = requestAnimationFrame(raf);
+    }
+    rafId = requestAnimationFrame(raf);
+
     const handleScroll = () => {
+      const scrollY = lenis.scroll;
       const totalScroll = document.documentElement.scrollHeight - window.innerHeight;
       if (totalScroll > 0) {
-        setScrollProgress(window.scrollY / totalScroll);
+        setScrollProgress(scrollY / totalScroll);
       }
 
       // Section scroll spy
@@ -38,6 +59,22 @@ export function App() {
       }
     };
 
+    lenis.on("scroll", handleScroll);
+
+    // Global in-page anchor interceptor for seamless smooth scrolling
+    const handleAnchorClick = (e) => {
+      const anchor = e.target.closest('a[href^="#"]');
+      if (anchor) {
+        const href = anchor.getAttribute("href");
+        if (href && href !== "#") {
+          e.preventDefault();
+          smoothScrollTo(href);
+        }
+      }
+    };
+
+    document.addEventListener("click", handleAnchorClick);
+
     const handleKeyDown = (e) => {
       // Alt + Shift + S to trigger swarm effect from anywhere
       if (e.altKey && e.shiftKey && (e.key === "S" || e.key === "s")) {
@@ -46,11 +83,13 @@ export function App() {
       }
     };
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
     window.addEventListener("keydown", handleKeyDown);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      cancelAnimationFrame(rafId);
+      lenis.destroy();
+      window.__lenis = null;
+      document.removeEventListener("click", handleAnchorClick);
       window.removeEventListener("keydown", handleKeyDown);
     };
   }, []);
@@ -63,7 +102,7 @@ export function App() {
         style={{ transform: `scaleX(${scrollProgress})` }}
       />
 
-      {/* Sticky Header with Navigation and Motion Button */}
+      {/* Sticky Header with Smooth Navigation and Motion Button */}
       <Header activeSection={activeSection} />
 
       <main>

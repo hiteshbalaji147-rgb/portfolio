@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { siteConfig } from "../config/site";
 import { toggleSwarm } from "../swarm/swarmEngine";
+import { smoothScrollTo } from "../utils/scroll";
 import { Sparkles, Menu, X, ArrowUpRight, Mail } from "lucide-react";
 
 export function Header({ activeSection }) {
@@ -29,10 +30,21 @@ export function Header({ activeSection }) {
     { label: "Contact", href: "#contact", id: "contact" }
   ];
 
+  const handleNavClick = (e, targetId) => {
+    e.preventDefault();
+    setMobileMenuOpen(false);
+    smoothScrollTo(targetId);
+  };
+
   return (
     <header className={`site-header ${scrolled ? "scrolled" : ""}`}>
-      {/* Brand Wordmark */}
-      <a href="#" className="wordmark" aria-label={`${siteConfig.identity.displayName} Home`}>
+      {/* Brand Wordmark - Click scrolls smoothly to top */}
+      <a
+        href="#home"
+        className="wordmark"
+        onClick={(e) => handleNavClick(e, "home")}
+        aria-label={`${siteConfig.identity.displayName} Home`}
+      >
         {siteConfig.identity.displayName}
         <span>.</span>
       </a>
@@ -43,6 +55,7 @@ export function Header({ activeSection }) {
           <a
             key={link.id}
             href={link.href}
+            onClick={(e) => handleNavClick(e, link.id)}
             className={activeSection === link.id ? "active" : ""}
           >
             {link.label}
@@ -68,7 +81,11 @@ export function Header({ activeSection }) {
         )}
 
         {/* Contact CTA */}
-        <a href="#contact" className="header-contact">
+        <a
+          href="#contact"
+          className="header-contact"
+          onClick={(e) => handleNavClick(e, "contact")}
+        >
           <Mail size={14} />
           <span>Say Hello</span>
           <ArrowUpRight size={14} />
@@ -93,7 +110,7 @@ export function Header({ activeSection }) {
             <a
               key={link.id}
               href={link.href}
-              onClick={() => setMobileMenuOpen(false)}
+              onClick={(e) => handleNavClick(e, link.id)}
             >
               <span>{link.label}</span>
               <ArrowUpRight size={16} className="muted" />

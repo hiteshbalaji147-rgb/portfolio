@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { siteConfig } from "../config/site";
 import { ArrowUp } from "lucide-react";
 import { GithubIcon, LinkedinIcon, TwitterIcon } from "./Icons";
+import { smoothScrollTo } from "../utils/scroll";
 
 export function Footer() {
   const [currentTime, setCurrentTime] = useState("");
@@ -26,7 +27,7 @@ export function Footer() {
   }, []);
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    smoothScrollTo("home");
   };
 
   return (

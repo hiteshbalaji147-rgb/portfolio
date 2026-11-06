@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a0a"/>
+      <stop offset="100%" stop-color="#141414"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg4)"/>
+  <!-- Vektor Design System Canvas -->
+  <rect x="30" y="30" width="740" height="440" rx="8" fill="#111111" stroke="#262626"/>
+  <!-- Header -->
+  <text x="60" y="70" fill="#f2efeb" font-family="sans-serif" font-size="14" font-weight="900">VEKTOR // COMPONENT SYSTEM</text>
+  <text x="60" y="88" fill="#a09c9a" font-family="monospace" font-size="10">TOKENS: 142 // ACCESSIBILITY: WCAG 2.2 AAA</text>
+  <!-- Buttons Row -->
+  <rect x="60" y="115" width="130" height="40" rx="4" fill="#ef4151"/>
+  <text x="125" y="140" fill="#fff" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">PRIMARY CTA</text>
+  <rect x="205" y="115" width="130" height="40" rx="4" fill="none" stroke="#ef4151" stroke-width="1.5"/>
+  <text x="270" y="140" fill="#ef4151" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">OUTLINE</text>
+  <rect x="350" y="115" width="130" height="40" rx="4" fill="#242424"/>
+  <text x="415" y="140" fill="#a09c9a" font-family="sans-serif" font-size="11" text-anchor="middle">SECONDARY</text>
+  <!-- Color Swatches Grid -->
+  <text x="60" y="195" fill="#a09c9a" font-family="monospace" font-size="10">SEMANTIC COLOR TOKENS</text>
+  <g transform="translate(60, 210)">
+    <rect x="0" y="0" width="70" height="50" rx="4" fill="#ef4151"/>
+    <text x="5" y="65" fill="#f2efeb" font-family="monospace" font-size="8">red-500</text>
+    <rect x="85" y="0" width="70" height="50" rx="4" fill="#ca2032"/>
+    <text x="90" y="65" fill="#f2efeb" font-family="monospace" font-size="8">red-600</text>
+    <rect x="170" y="0" width="70" height="50" rx="4" fill="#10b981"/>
+    <text x="175" y="65" fill="#f2efeb" font-family="monospace" font-size="8">emerald-500</text>
+    <rect x="255" y="0" width="70" height="50" rx="4" fill="#3b82f6"/>
+    <text x="260" y="65" fill="#f2efeb" font-family="monospace" font-size="8">blue-500</text>
+    <rect x="340" y="0" width="70" height="50" rx="4" fill="#f59e0b"/>
+    <text x="345" y="65" fill="#f2efeb" font-family="monospace" font-size="8">amber-500</text>
+  </g>
+  <!-- Card Preview (Right side) -->
+  <rect x="510" y="115" width="230" height="320" rx="6" fill="#181818" stroke="#333333"/>
+  <rect x="525" y="130" width="200" height="110" rx="4" fill="#262626"/>
+  <text x="525" y="265" fill="#f2efeb" font-family="sans-serif" font-size="12" font-weight="bold">Interactive Token Card</text>
+  <text x="525" y="285" fill="#a09c9a" font-family="sans-serif" font-size="10">Automated dark/light theme switching</text>
+  <rect x="525" y="380" width="200" height="35" rx="4" fill="#ef4151"/>
+  <text x="625" y="402" fill="#fff" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">Apply Changes</text>
+</svg>

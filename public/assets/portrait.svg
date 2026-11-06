@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900" width="100%" height="100%">
+  <defs>
+    <!-- Red ambient back-glow -->
+    <radialGradient id="ambientBackGlow" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#ef4151" stop-opacity="0.45"/>
+      <stop offset="60%" stop-color="#991523" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="bodyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1819"/>
+      <stop offset="60%" stop-color="#140f10"/>
+      <stop offset="100%" stop-color="#090909"/>
+    </linearGradient>
+    <linearGradient id="rimLight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ef4151" stop-opacity="0.8"/>
+      <stop offset="15%" stop-color="#ffffff" stop-opacity="0.2"/>
+      <stop offset="35%" stop-color="#140f10" stop-opacity="0"/>
+      <stop offset="85%" stop-color="#140f10" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#ef4151" stop-opacity="0.6"/>
+    </linearGradient>
+    <linearGradient id="fadeBottom" x1="0%" y1="70%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#090909" stop-opacity="1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Ambient Glow Behind Head & Shoulders -->
+  <ellipse cx="300" cy="420" rx="260" ry="340" fill="url(#ambientBackGlow)"/>
+
+  <!-- High-End Silhouette Cutout of Developer/Creator -->
+  <!-- Torso & Shoulders -->
+  <path d="M70 900 C80 720, 110 590, 190 510 C210 490, 240 480, 260 480 L340 480 C360 480, 390 490, 410 510 C490 590, 520 720, 530 900 Z" fill="url(#bodyGrad)"/>
+  
+  <!-- Jacket Collar & Lapels -->
+  <path d="M255 480 L290 620 L300 750 L310 620 L345 480 L300 560 Z" fill="#110d0e" stroke="#2b1a1d" stroke-width="1.5"/>
+
+  <!-- Neck -->
+  <rect x="270" y="380" width="60" height="110" rx="25" fill="#241b1d"/>
+
+  <!-- Head / Face Profile Silhouette -->
+  <ellipse cx="300" cy="330" rx="85" ry="110" fill="#291e20"/>
+
+  <!-- Stylized Hair & Contour -->
+  <path d="M210 320 C205 230, 250 180, 300 175 C360 170, 395 210, 400 290 C390 280, 375 270, 350 265 C320 260, 280 270, 240 295 Z" fill="#140d0f"/>
+
+  <!-- Rim Light Overlays -->
+  <path d="M70 900 C80 720, 110 590, 190 510 C210 490, 240 480, 260 480 L340 480 C360 480, 390 490, 410 510 C490 590, 520 720, 530 900 Z" fill="none" stroke="url(#rimLight)" stroke-width="3"/>
+  <ellipse cx="300" cy="330" rx="85" ry="110" fill="none" stroke="url(#rimLight)" stroke-width="2.5"/>
+
+  <!-- Fade to dark bottom -->
+  <rect x="0" y="600" width="600" height="300" fill="url(#fadeBottom)"/>
+
+  <!-- Subtle Developer HUD Wireframe Accent Overlay -->
+  <g stroke="#ef4151" stroke-opacity="0.3" stroke-width="1">
+    <line x1="285" y1="330" x2="315" y2="330"/>
+    <line x1="300" y1="315" x2="300" y2="345"/>
+    <circle cx="300" cy="330" r="12" fill="none"/>
+  </g>
+</svg>

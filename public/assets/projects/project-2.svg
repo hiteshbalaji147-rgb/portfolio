@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080808"/>
+      <stop offset="100%" stop-color="#140a0c"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg2)"/>
+  <!-- Header Bar -->
+  <rect x="0" y="0" width="800" height="45" fill="#120c0e" stroke-bottom="#26171a"/>
+  <text x="35" y="28" fill="#ef4151" font-family="monospace" font-size="13" font-weight="bold">HYPERION // HIGH-FREQ TERMINAL</text>
+  <text x="760" y="28" fill="#10b981" font-family="monospace" font-size="11" text-anchor="end">LIVE STREAM: 104,200 MSG/S</text>
+  <!-- Main Candlestick Chart Window -->
+  <rect x="35" y="65" width="490" height="395" rx="4" fill="#0b0809" stroke="#26171a"/>
+  <!-- Horizontal Price Lines -->
+  <g stroke="#ffffff" stroke-opacity="0.05" stroke-dasharray="4,4">
+    <line x1="35" y1="120" x2="525" y2="120"/>
+    <line x1="35" y1="180" x2="525" y2="180"/>
+    <line x1="35" y1="240" x2="525" y2="240"/>
+    <line x1="35" y1="300" x2="525" y2="300"/>
+    <line x1="35" y1="360" x2="525" y2="360"/>
+  </g>
+  <!-- Candlesticks -->
+  <!-- Green candle 1 -->
+  <line x1="70" y1="260" x2="70" y2="330" stroke="#10b981" stroke-width="1.5"/>
+  <rect x="63" y="280" width="14" height="35" fill="#10b981"/>
+  <!-- Green candle 2 -->
+  <line x1="105" y1="240" x2="105" y2="310" stroke="#10b981" stroke-width="1.5"/>
+  <rect x="98" y="255" width="14" height="40" fill="#10b981"/>
+  <!-- Red candle 1 -->
+  <line x1="140" y1="220" x2="140" y2="300" stroke="#ef4151" stroke-width="1.5"/>
+  <rect x="133" y="250" width="14" height="35" fill="#ef4151"/>
+  <!-- Green candle 3 -->
+  <line x1="175" y1="200" x2="175" y2="280" stroke="#10b981" stroke-width="1.5"/>
+  <rect x="168" y="215" width="14" height="45" fill="#10b981"/>
+  <!-- Green candle 4 -->
+  <line x1="210" y1="160" x2="210" y2="250" stroke="#10b981" stroke-width="1.5"/>
+  <rect x="203" y="175" width="14" height="50" fill="#10b981"/>
+  <!-- Red candle 2 -->
+  <line x1="245" y1="170" x2="245" y2="240" stroke="#ef4151" stroke-width="1.5"/>
+  <rect x="238" y="185" width="14" height="30" fill="#ef4151"/>
+  <!-- Green candle 5 breakout -->
+  <line x1="280" y1="120" x2="280" y2="210" stroke="#10b981" stroke-width="1.5"/>
+  <rect x="273" y="135" width="14" height="60" fill="#10b981"/>
+  <!-- EMA Line -->
+  <path d="M60 305 Q140 270 210 200 T360 145 T480 110" fill="none" stroke="#ef4151" stroke-width="2.5"/>
+  <!-- Order Book Panel (Right) -->
+  <rect x="545" y="65" width="220" height="395" rx="4" fill="#0f0b0c" stroke="#26171a"/>
+  <text x="565" y="95" fill="#f2efeb" font-family="monospace" font-size="11" font-weight="bold">L2 ORDERBOOK</text>
+  <!-- Asks -->
+  <rect x="560" y="115" width="190" height="18" fill="#ef4151" fill-opacity="0.12"/>
+  <text x="565" y="128" fill="#ef4151" font-family="monospace" font-size="10">94,820.50</text>
+  <text x="740" y="128" fill="#a09c9a" font-family="monospace" font-size="10" text-anchor="end">4.182 BTC</text>
+  <rect x="560" y="137" width="150" height="18" fill="#ef4151" fill-opacity="0.18"/>
+  <text x="565" y="150" fill="#ef4151" font-family="monospace" font-size="10">94,815.00</text>
+  <text x="740" y="150" fill="#a09c9a" font-family="monospace" font-size="10" text-anchor="end">2.840 BTC</text>
+  <!-- Spread line -->
+  <line x1="560" y1="220" x2="750" y2="220" stroke="#ef4151" stroke-width="1"/>
+  <text x="655" y="235" fill="#f2efeb" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">94,800.00</text>
+  <!-- Bids -->
+  <rect x="560" y="255" width="170" height="18" fill="#10b981" fill-opacity="0.15"/>
+  <text x="565" y="268" fill="#10b981" font-family="monospace" font-size="10">94,795.50</text>
+  <text x="740" y="268" fill="#a09c9a" font-family="monospace" font-size="10" text-anchor="end">3.419 BTC</text>
+</svg>

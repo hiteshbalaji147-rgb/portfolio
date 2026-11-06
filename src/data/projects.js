@@ -1,0 +1,101 @@
+export const projectsData = [
+  {
+    id: "arogya-pollution-forecasting",
+    title: "AROGYA: AI POLLUTION & ROUTE FORECASTING",
+    category: "AI & HealthTech",
+    year: "2026",
+    summary: "AI-based environmental pollution forecasting for personalized health alerts and smart route planning.",
+    description: "Developed and deployed an intelligent geospatial forecasting system predicting air quality anomalies along transit corridors. Features interactive mapping, personal respiratory risk telemetry, and automated route recommendations.",
+    role: "Lead AI Engineer & Developer",
+    tools: ["Python", "Machine Learning", "Jupyter", "Vercel", "FastAPI"],
+    coverImage: "/assets/projects/project-3.svg",
+    liveUrl: "https://arogya-route-pollution-forecasting.vercel.app",
+    sourceUrl: "https://github.com/hiteshbalaji147-rgb/arogya-route-pollution-forecasting",
+    featured: true,
+    stats: { status: "Live on Vercel", accuracy: "94.2%", latency: "< 80ms" }
+  },
+  {
+    id: "vibe-coding-platform",
+    title: "VIBE CODING PLATFORM",
+    category: "Web Application",
+    year: "2026",
+    summary: "Modern interactive cloud coding platform with live code sandbox and responsive execution.",
+    description: "Engineered a high-productivity browser-based code workspace utilizing TypeScript and Next.js. Supports live syntax highlighting, cloud-hosted compilation, and streamlined developer collaboration.",
+    role: "Full-Stack Web Developer",
+    tools: ["TypeScript", "React", "Next.js", "Vercel", "Tailwind CSS"],
+    coverImage: "/assets/projects/project-1.svg",
+    liveUrl: "https://vibe-coding-platform-phi-eight-54.vercel.app",
+    sourceUrl: "https://github.com/hiteshbalaji147-rgb/vibe-coding-platform",
+    featured: true,
+    stats: { deployment: "Vercel Edge", stack: "TypeScript", framework: "Next.js" }
+  },
+  {
+    id: "groq-llama-chatbot",
+    title: "GROQ LPU ULTRA-FAST AI CHATBOT",
+    category: "GenAI / LLMs",
+    year: "2025",
+    summary: "Lightning-fast conversational assistant powered by Groq LPU inference and Llama 3.3 70B.",
+    description: "Built a high-throughput conversational AI assistant leveraging Groq's specialized LPU hardware and Llama 3.3 70B. Achieves unprecedented tokens-per-second streaming speeds with Streamlit front-end integration.",
+    role: "AI & Backend Engineer",
+    tools: ["Python", "Groq API", "Llama 3.3 70B", "Streamlit", "REST"],
+    coverImage: "/assets/projects/project-2.svg",
+    liveUrl: "",
+    sourceUrl: "https://github.com/hiteshbalaji147-rgb/groq-chatbot",
+    featured: true,
+    stats: { model: "Llama 3.3 70B", inference: "Groq LPU", streaming: "Sub-50ms" }
+  },
+  {
+    id: "groq-vision-chatbot",
+    title: "GROQ MULTIMODAL VISION SYSTEM",
+    category: "GenAI / Vision",
+    year: "2025",
+    summary: "AI-powered multimodal image analysis chatbot utilizing Groq's high-speed inference pipeline.",
+    description: "Architected an interactive visual reasoning assistant capable of deep document analysis, scene understanding, and image question-answering with ultra-low latency inference.",
+    role: "Computer Vision & AI Developer",
+    tools: ["Python", "Groq Vision", "Multimodal LLMs", "Streamlit", "OpenCV"],
+    coverImage: "/assets/projects/project-5.svg",
+    liveUrl: "",
+    sourceUrl: "https://github.com/hiteshbalaji147-rgb/groq-vision-chatbot",
+    featured: false,
+    stats: { multimodal: "Vision + Text", processing: "Real-Time", hardware: "Groq API" }
+  },
+  {
+    id: "smart-face-attendance",
+    title: "SMART BIOMETRIC FACE ATTENDANCE",
+    category: "Computer Vision",
+    year: "2025",
+    summary: "Contactless facial recognition attendance tracking platform with automated log verification.",
+    description: "Implemented a real-time face detection and embedding extraction pipeline using OpenCV and deep learning feature matchers. Features automated timestamps, spoof resistance, and automated database sync.",
+    role: "Computer Vision Engineer",
+    tools: ["Python", "OpenCV", "Deep Learning", "SQLite", "NumPy"],
+    coverImage: "/assets/projects/project-6.svg",
+    liveUrl: "",
+    sourceUrl: "https://github.com/hiteshbalaji147-rgb/smart-face-attendance-system",
+    featured: false,
+    stats: { recognition: "OpenCV Haar/DNN", fps: "30+ FPS", verification: "Instant" }
+  },
+  {
+    id: "driver-drowsiness-detection",
+    title: "REAL-TIME DRIVER DROWSINESS ALERT",
+    category: "Computer Vision",
+    year: "2025",
+    summary: "Safety-critical vision system tracking eye aspect ratio (EAR) and facial fatigue with audio alarms.",
+    description: "Engineered an in-vehicle safety assistant that continuously analyzes facial landmark positions to calculate eye closure duration and yawn frequency, triggering immediate hazard alerts before fatigue sets in.",
+    role: "Computer Vision Engineer",
+    tools: ["Python", "OpenCV", "Dlib / Landmarks", "Audio Telemetry"],
+    coverImage: "/assets/projects/project-4.svg",
+    liveUrl: "",
+    sourceUrl: "https://github.com/hiteshbalaji147-rgb/driver-drowsiness-system-uding-CV",
+    featured: false,
+    stats: { earThreshold: "Adaptive", latency: "Real-time", safety: "Audio Warning" }
+  }
+];
+
+export const projectCategories = [
+  "All",
+  "AI & HealthTech",
+  "Web Application",
+  "GenAI / LLMs",
+  "GenAI / Vision",
+  "Computer Vision"
+];
